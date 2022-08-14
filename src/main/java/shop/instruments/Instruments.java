@@ -8,6 +8,8 @@ public abstract class Instruments implements IPlay {
     private String colour;
     private InstrumentType type;
 
+
+
     public Instruments(String make, String colour, InstrumentType type) {
         this.make = make;
         this.colour = colour;
@@ -25,4 +27,8 @@ public abstract class Instruments implements IPlay {
     public InstrumentType getType() {
         return type;
     }
+
+
+
+
 }

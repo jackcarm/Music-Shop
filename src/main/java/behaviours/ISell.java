@@ -1,6 +1,15 @@
 package behaviours;
 
-public class ISell {
+public interface ISell {
 
-    
+    double calculateMarkup();
+
+    double getPurchasePrice();
+
+    double getSalePrice();
+
+    void setPurchasePrice();
+
+    void setSalePrice();
+
 }

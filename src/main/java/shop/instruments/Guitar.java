@@ -1,6 +1,5 @@
 package shop.instruments;
 
-import behaviours.IPlay;
 
 public class Guitar extends Instruments {
 
