@@ -2,7 +2,7 @@ package instruments;
 
 import org.junit.Before;
 import org.junit.Test;
-import shop.instruments.Guitar;
+
 import shop.instruments.InstrumentType;
 import shop.instruments.Saxophone;
 
