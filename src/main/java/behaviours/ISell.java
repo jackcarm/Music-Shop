@@ -6,10 +6,10 @@ public interface ISell {
 
     double getPurchasePrice();
 
-    double getSalePrice();
+    double getSellPrice();
 
-    void setPurchasePrice();
+    void setPurchasePrice(double purchasePrice);
 
-    void setSalePrice();
+    void setSellPrice(double salePrice);
 
 }

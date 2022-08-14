@@ -1,12 +1,15 @@
 package shop.instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public abstract class Instruments implements IPlay {
+public abstract class Instruments implements IPlay, ISell {
 
     private String make;
     private String colour;
     private InstrumentType type;
+    private double purchasePrice;
+    private double sellPrice;
 
 
 
@@ -14,6 +17,7 @@ public abstract class Instruments implements IPlay {
         this.make = make;
         this.colour = colour;
         this.type = type;
+
     }
 
     public String getMake() {
@@ -28,7 +32,28 @@ public abstract class Instruments implements IPlay {
         return type;
     }
 
+    @Override
+    public double getPurchasePrice() {
+        return purchasePrice;
+    }
 
+    @Override
+    public double getSellPrice() {
+        return sellPrice;
+    }
 
+    @Override
+    public void setPurchasePrice(double purchasePrice) {
+        this.purchasePrice = purchasePrice;
+    }
+
+    @Override
+    public void setSellPrice(double sellPrice) {
+        this.sellPrice = sellPrice;
+    }
+
+    public double calculateMarkup() {
+        return (getSellPrice()/getPurchasePrice()) - 1;
+    }
 
 }

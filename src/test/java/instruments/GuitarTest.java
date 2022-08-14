@@ -42,4 +42,33 @@ public class GuitarTest {
     public void canPlaySong(){
         assertEquals("Strum strum", guitar.play());
     }
+
+    @Test
+    public void canGetPurchasePrice(){
+        assertEquals(0, guitar.getPurchasePrice(), 00.1);
+    }
+
+    @Test
+    public void canSetPurchasePrice(){
+        guitar.setPurchasePrice(1000.00);
+        assertEquals(1000.00, guitar.getPurchasePrice(), 00.1);
+    }
+
+    @Test
+    public void canGetSellPrice(){
+        assertEquals(0, guitar.getSellPrice(), 00.1);
+    }
+
+    @Test
+    public void canSetSellPrice(){
+        guitar.setSellPrice(1200);
+        assertEquals(1200, guitar.getSellPrice(),00.1);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        guitar.setPurchasePrice(1000);
+        guitar.setSellPrice(1200);
+        assertEquals(0.2, guitar.calculateMarkup(), 0.01);
+    }
 }
