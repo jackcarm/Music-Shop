@@ -44,5 +44,34 @@ public class ViolinTest {
     public void canPlaySong(){
         assertEquals("Plink Plonk", violin.play());
     }
+
+    @Test
+    public void canGetPurchasePrice(){
+        assertEquals(0, violin.getPurchasePrice(), 00.1);
+    }
+
+    @Test
+    public void canSetPurchasePrice(){
+        violin.setPurchasePrice(3000.00);
+        assertEquals(3000, violin.getPurchasePrice(), 00.1);
+    }
+
+    @Test
+    public void canGetSellPrice(){
+        assertEquals(0, violin.getSellPrice(), 00.1);
+    }
+
+    @Test
+    public void canSetSellPrice(){
+        violin.setSellPrice(4500);
+        assertEquals(4500, violin.getSellPrice(),00.1);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        violin.setPurchasePrice(3000);
+        violin.setSellPrice(4500);
+        assertEquals(0.5, violin.calculateMarkup(), 0.01);
+    }
 }
 
