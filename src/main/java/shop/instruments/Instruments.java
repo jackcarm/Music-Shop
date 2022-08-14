@@ -17,6 +17,8 @@ public abstract class Instruments implements IPlay, ISell {
         this.make = make;
         this.colour = colour;
         this.type = type;
+        this.purchasePrice = 0;
+        this.sellPrice = 0;
 
     }
 
@@ -32,22 +34,22 @@ public abstract class Instruments implements IPlay, ISell {
         return type;
     }
 
-    @Override
+
     public double getPurchasePrice() {
         return purchasePrice;
     }
 
-    @Override
+
     public double getSellPrice() {
         return sellPrice;
     }
 
-    @Override
+
     public void setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
 
-    @Override
+
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
     }
